@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Portfolio Tailwind</title>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="stylesheet" href="dist/css/final.css">
    <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -124,12 +125,28 @@
          <div class="flex flex-wrap">
             <div class="w-full px-4 mb-10 lg:w-1/2">
                <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-               <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Yuk, belajar web
-                  programming</h2>
-               <p class="font-medium text-base text-secondary max-w-xl">Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
-                  Enim, earum illo recusandae animi placeat
-                  blanditiis dicta!</p>
+               <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Apa itu Web
+                  Programming?</h2>
+               <p class="font-medium text-base text-secondary max-w-xl text-left" data-aos="fade-right">Web programming
+                  adalah sebuah proses
+                  pembuatan
+                  website atau aplikasi berbasis web yang dapat diakses melalui internet menggunakan browser. Dalam
+                  pengembangan web, terdapat dua bagian utama yang saling bekerja sama yaitu frontend dan backend.
+                  Frontend merupakan bagian yang dapat dilihat dan berinteraksi langsung dengan pengguna, menggunakan
+                  teknologi seperti HTML untuk struktur konten, CSS untuk pengaturan tampilan, dan JavaScript untuk
+                  membuat website menjadi interaktif. Sementara itu, backend adalah bagian yang bekerja di belakang
+                  layar, menggunakan bahasa pemrograman seperti PHP, Python, atau NodeJS untuk mengolah data dan logika
+                  aplikasi.
+               </p>
+               <br><br>
+               <p data-aos="fade-left" class="font-medium text-base text-secondary max-w-xl text-right lg:text-left">
+                  Ketika sebuah website dibuka, terjadi komunikasi antara frontend dan backend melalui server. Backend
+                  akan berkomunikasi dengan database untuk menyimpan atau mengambil data yang diperlukan. Database
+                  seperti MySQL atau MongoDB berfungsi sebagai tempat penyimpanan segala informasi yang dibutuhkan
+                  website, mulai dari data pengguna hingga konten website. Semua komponen ini bekerja bersama untuk
+                  menciptakan pengalaman web yang menarik dan fungsional bagi pengguna. Web programming terus berkembang
+                  dengan munculnya berbagai framework dan teknologi baru yang membuat pengembangan website menjadi lebih
+                  efisien dan powerful.</p>
             </div>
             <div class="w-full px-4 lg:w-1/2">
                <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Let's be friend
@@ -194,7 +211,7 @@
 
          <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
             <div class="mb-12 p-4 md:w-1/2">
-               <div class="rounded-md shadow-md overflow-hidden hover:translate-x-1">
+               <div class="rounded-md shadow-md overflow-hidden">
                   <img src="dist/img/portfolio/1.png" alt="web-jam" width="w-full">
                </div>
                <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">Aplikasi Jam</h3>
@@ -246,19 +263,19 @@
             <div class="flex flex-wrap items-center justify-center">
                <a href="#"
                   class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
-                  <img src="dist/img/clients/binance.svg" alt="binance">
+                  <img data-tilt src="dist/img/clients/binance.svg" alt="binance">
                </a>
                <a href="#"
                   class="max-w-[120px] mx-4 py-4 grayscale opacity-30 transition duration-500 hover:grayscale-0 hover:opacity-100">
-                  <img src="dist/img/clients/tesla.svg" alt="tesla" width="200px">
+                  <img data-tilt src="dist/img/clients/tesla.svg" alt="tesla" width="200px">
                </a>
                <a href="#"
                   class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
-                  <img src="dist/img/clients/bing.svg" alt="bing" width="200px">
+                  <img data-tilt src="dist/img/clients/bing.svg" alt="bing" width="200px">
                </a>
                <a href="#"
                   class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100">
-                  <img width="120px" src="dist/img/clients/tailwind.svg" alt="tailwind">
+                  <img data-tilt width="120px" src="dist/img/clients/tailwind.svg" alt="tailwind">
                </a>
             </div>
          </div>
@@ -484,6 +501,8 @@
 
    <!--? js -->
    <script src="dist/script.js"></script>
+   <script type="text/javascript" src="dist/vanilla-tilt.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 

@@ -2,7 +2,7 @@
 window.onscroll = function () {
    const header = document.querySelector('header');
    const fixedNav = header.offsetTop;
-   const toTop = document.querySelector('#to-top')
+   const toTop = document.querySelector('#to-top');
 
 
    if (window.pageYOffset > fixedNav) {
@@ -14,7 +14,7 @@ window.onscroll = function () {
       toTop.classList.add('hidden');
       toTop.classList.remove('flex');
    }
-}
+};
 
 //? hamburger
 const hamburger = document.querySelector('#hamburger');
@@ -45,7 +45,7 @@ darkToggle.addEventListener('click', function () {
       html.classList.remove('dark');
       localStorage.theme = 'light';
    }
-})
+});
 
 //? pindahkan posisi toggle sesuai mode
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -53,3 +53,6 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 } else {
    darkToggle.checked = false;
 }
+
+//? AOS
+AOS.init();
