@@ -55,4 +55,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
 }
 
 //? AOS
-AOS.init();
+AOS.init({
+   once: true,
+   duration: 1500
+});
