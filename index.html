@@ -399,7 +399,7 @@
          <div class="success w-full lg:w-2/3 h-10 bg-cyan-400 rounded-lg flex justify-between px-4 py-2 border-cyan-900 border-2 text-cyan-900 hidden">
             <p></p>
             <p>Pesan Berhasil Terkirim!</p>
-            <p class="del">X</p>
+            <p class="del cursor-pointer">X</p>
          </div>
 
          <form name="submit-to-google-sheet">
@@ -549,6 +549,11 @@
       const success = document.querySelector('.success');
       const del = document.querySelector('.del');
       const send = document.querySelector('.send');
+
+      del.addEventListener('click', ()=>{
+         success.classList.toggle('hidden')
+
+      });
          form.addEventListener('submit', e => {
             send.classList.toggle('loader');
             e.preventDefault()
